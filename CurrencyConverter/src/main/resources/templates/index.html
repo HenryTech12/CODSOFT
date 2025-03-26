@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en"
+   xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  
+  <!-- HTML -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" th:href="@{/css/main.css}">
+</head>
+
+<body>
+  <!-- Project -->
+  <main class="container">
+    <form th:action="@{/convert}" th:object="${obj}" method="post">
+      <header class="header">
+        <h2>Currency Converter</h2>
+      </header>
+      <div class="form-content">
+        <label class="amount">Enter Amount</label>
+        <input type="text" placeholder="0" th:field="*{amount}">
+        <div class="convert">
+          <section class="s">
+            <label class="l">From</label>
+            <select name="from" th:field="*{from}">
+              <optgroup>
+                <option th:each="result : ${countries}" th:text="${result}" th:value="${result}"></option>
+              </optgroup>
+            </select>
+          </section>
+          
+         <span class="material-symbols-outlined">
+            sync_alt </span>
+          
+          <section class="s">
+            <label class="l">To</label>
+            <select name="to" th:field="*{to}">
+              <optgroup>
+                <option th:each="result : ${countries}" th:text="${result}" th:value="${result}"></option>
+              </optgroup>
+            </select>
+          </section>
+        </div>
+        
+        <span class="display" th:text="${result}"></span>
+        <input type="submit" value="get exchange rate">
+      </div>
+    </form>
+  </main>
+</body>
+</html>
