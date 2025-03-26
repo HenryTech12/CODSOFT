@@ -27,4 +27,6 @@ A simple Currency Converter application built with Java and Spring Boot.
 - Maven installed.
 - Optional: A database setup (if persistent storage is required).
 
+## CODSOFT INTERNSHIP TASK
+
 ---
