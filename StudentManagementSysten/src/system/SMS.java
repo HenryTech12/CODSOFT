@@ -39,7 +39,7 @@ public class SMS
 	public void performOperation() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println();
-		System.out.println("Choose Your Option \nEnter between [ 1 - 6 ]: ");
+		System.out.println("Choose Your Option \nEnter between [ 1 - 7 ]: ");
 		int choice = sc.nextInt();
 		sc.nextLine(); //clears buffer
 		switch(choice) {
