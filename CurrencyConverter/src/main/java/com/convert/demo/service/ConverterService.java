@@ -98,7 +98,7 @@ public class ConverterService {
           double newToValue = Math.floor((amount * toValue));
           double newFromValue = Math.floor((amount * fromValue));
 
-          String fromResult = newFromValue+" "+from;
+          String fromResult = ""+fromValue;
           String toResult = ((newToValue/newFromValue) * amount)+" "+to;
 
           System.out.println("amount: "+request.getAmount());
